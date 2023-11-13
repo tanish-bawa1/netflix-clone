@@ -1,0 +1,661 @@
+@font-face {
+    font-family: "Netflix-Sans";
+    src: url(./fonts/NetflixSans_W_Blk.woff2);
+  }
+  
+  @font-face {
+    font-family: "Netflix-sans-wbd";
+    src: url(./fonts/NetflixSans_W_Bd.woff2);
+  }
+  
+  @font-face {
+    font-family: "Netflix-sans-mg";
+    src: url(./fonts/NetflixSans_W_Md.woff2);
+  }
+  
+  @font-face {
+    font-family: "Netflix-sans-rg";
+    src: url(./fonts/NetflixSans_W_Rg.woff2);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+  }
+  
+  body {
+    background-color: #000;
+  }
+  
+  .container {
+    padding: 1.4rem 2rem;
+  }
+  
+  header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .header-btns {
+    display: flex;
+  }
+  
+  .sign-up-btn {
+    margin-left: 1.5rem;
+  }
+  
+  .sign-up {
+    border-color: rgba(0, 0, 0, 0);
+  }
+  
+  .header-logo {
+    width: 100%;
+    height: 120vh;
+    position: absolute;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url(./images/header-image.jpg);
+    background-size: cover;
+    border-bottom: 0.5rem solid #232323;
+    z-index: -1;
+  }
+  
+  .select-container {
+    border: none;
+    appearance: none;
+    position: relative;
+    color: white;
+    font-size: 20px;
+  }
+  
+  #language {
+    background: transparent;
+    color: white;
+    padding: 10px 10px 10px 25px;
+    font-size: 1rem;
+    border-radius: 0.3375rem;
+  }
+  
+  .sign-up {
+    background: #db0001;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 0.3375rem;
+    cursor: pointer;
+  }
+  
+  .select-btn {
+      overflow: hidden;
+      border: 1px solid #000;
+      position: relative;
+    }
+    .select-btn:after {
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid #ffffff;
+      position: absolute;
+      top: 44%;
+      right: 4px;
+      content: "";
+      z-index: 98;
+    }
+    .select-btn select {
+      position: relative;
+      background: none;
+    }
+  
+  .select-container img {
+    width: 20px;
+    position: absolute;
+    left: 5px;
+    top: 25%;
+  }
+  
+  .netflix-logo {
+    height: 2.5rem;
+  }
+  
+  .sign-up:hover {
+    background-color: #bf151d;
+  }
+  
+  .front-section {
+    width: 100%;
+    height: 104vh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .main-heading-1 h1 {
+    font-size: 3.05rem;
+    font-weight: 900;
+    font-family: "Netflix-Sans";
+  }
+  
+  .main-heading-1 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .main-heading-3 h3 {
+    font-size: 1.5rem;
+    font-weight: 200;
+    font-family: "Netflix-sans-rg";
+  }
+  
+  .main-heading-3 {
+    padding-bottom: 2rem;
+  }
+  
+  .main-paragraph {
+    font-family: "Netflix-sans-rg";
+    font-size: 1.25rem;
+    font-weight: 200;
+  }
+  
+  .form-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .form-section-input {
+    height: 3.5rem;
+    width: 23rem;
+    margin-left: -1rem;
+    padding-left: 1rem;
+    background: transparent;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 0.3375rem;
+  }
+  
+  .form-section-input::placeholder{
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1rem;
+  }
+  
+  .form-section button {
+    width: 12rem;
+    margin-left: 0.5rem;
+    background-color: #db0001;
+    cursor: pointer;
+    border-radius: 0.3375rem;
+    font-family: "Netflix-sans-mg";
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    border: 0;
+  }
+  
+  .form-section button:hover {
+    background-color: #bf151d;
+  }
+  
+  .arrow-logo-div {
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+  }
+  
+  .line-break {
+    width: 100%;
+    height: 0.5rem;
+    background-color: #232323;
+  }
+  
+  .second-section {
+    width: 100%;
+    height: 100vh;
+    padding: 1.4rem 2rem;
+  }
+  
+  .second-section-img {
+    width: 80%;
+  }
+  
+  .second-section-img img {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .second-section-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .second-section-text h1 {
+    font-family: "Netflix-Sans";
+    font-size: 3rem;
+    font-weight: 900;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  
+  .second-section-text p {
+    font-family: "Netflix-sans-rg";
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  
+  #feature-image-2 {
+    width: 70%;
+    padding-top: 6rem;
+    padding-left: 2rem;
+  }
+  
+  #feature-image-4 {
+    width: 110%;
+    padding-top: 6rem;
+    padding-left: 2rem;
+  }
+  
+  .question-area {
+    margin: 4.5rem 2rem;
+  }
+  
+  .question-heading {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .question-heading h1 {
+    font-family: "Netflix-Sans";
+    font-size: 3rem;
+    font-weight: 900;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  
+  .question-area ul {
+    list-style: none;
+  }
+  
+  .question-area ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .question-buttons {
+    background-color: #2d2d2d;
+    width: 100%;
+    text-align: left;
+    padding: 1.5rem;
+    padding-top: 0;
+    border: 0;
+    cursor: pointer;
+  }
+  
+  summary::marker {
+    color: transparent;
+  }
+  
+  .question-buttons h3 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Netflix-sans-rg";
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  
+  .question-buttons:hover {
+    background-color: #414141;
+  }
+  
+  .question-buttons span {
+    width: 100%;
+  }
+  
+  details[open] .question-buttons>h3>svg{
+      transform: rotate(45deg);
+  }
+  
+  .question-buttons svg {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+  
+  .answer {
+    width: 100%;
+    padding: 1.5rem;
+    background-color: #2d2d2d;
+    margin-top: 1px;
+  }
+  
+  .answer span {
+    font-family: "Netflix-sans-rg";
+    font-size: 1.5rem;
+  }
+  
+  .ask-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+  
+  .foot {
+    padding: 3rem 2rem;
+  }
+  
+  .foot * {
+    color: #ffffffb3;
+    font-family: "Netflix-sans-rg";
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  
+  .question-call {
+    padding-bottom: 2rem;
+  }
+  
+  .links {
+    list-style: none;
+    line-height: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  
+  .footer-btn {
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .netflix-india {
+    font-size: 0.875rem;
+  }
+  
+  @media screen and (max-width: 960px) {
+    .netflix-logo {
+      height: 1.5rem;
+    }
+  
+    #language {
+      padding: 0.375rem 0;
+      padding-left: 2rem;
+    }
+  
+    .select-container img {
+      top: 0;
+      margin-top: 0.375rem;
+    }
+  
+    .select-btn:after{
+      top: 42%;
+    }
+  
+    .sign-up {
+      padding: 0.375rem 0.75rem;
+    }
+  
+    .sign-up-btn {
+      margin-left: 0.375rem;
+    }
+  
+    .header-logo {
+      height: 100vh;
+    }
+  
+    .front-section {
+      height: 84vh;
+    }
+  
+    .main-heading-1 h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  
+    .main-heading-3 h3 {
+      font-size: 1.125rem;
+      font-weight: 400;
+    }
+  
+    .main-paragraph p {
+      font-size: 1.125rem;
+      font-weight: 400;
+    }
+  
+    .second-section-content {
+      flex-direction: column;
+    }
+  
+    .second-section-text {
+      text-align: center;
+      padding-top: 2rem;
+    }
+  
+    .second-section-text h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  
+    .second-section-text p {
+      font-size: 1.25rem;
+      font-weight: 400;
+    }
+  
+    .second-section {
+      height: 100%;
+    }
+  
+    #third-section,
+    #forth-section {
+      flex-direction: column-reverse;
+    }
+  
+    #third-section p,
+    #forth-section P {
+      font-size: 1.125rem;
+    }
+  
+    .question-area {
+      margin: 3.5rem 2rem;
+    }
+  
+    .question-heading h1 {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+  
+    .answer span {
+      font-size: 1.125rem;
+      font-weight: 400;
+    }
+  
+    .question-buttons h3 {
+      font-size: 1.125rem;
+      font-weight: 400;
+    }
+  
+    .question-buttons svg {
+      width: 1rem;
+      height: 1rem;
+    }
+  
+    .links {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .foot * {
+      font-size: 0.875rem;
+    }
+    .foot {
+      padding: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .netflix-logo {
+      height: 1.5rem;
+    }
+  
+    .container {
+      padding: 1.5rem;
+    }
+  
+    #language {
+      padding: 0.375rem 0;
+      padding-left: 2rem;
+    }
+  
+    .select-container img {
+      top: 0;
+      margin-top: 0.375rem;
+    }
+  
+    .sign-up {
+      padding: 0.375rem 0.75rem;
+    }
+  
+    .sign-up-btn {
+      margin-left: 0.375rem;
+    }
+  
+    .header-logo {
+      height: 100vh;
+    }
+  
+    .front-section {
+      height: 83vh;
+    }
+  
+    .main-heading-1 {
+      margin-top: 0;
+    }
+  
+    .form-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .form-section form {
+      width: 100%;
+    }
+  
+    .form-section button {
+      margin-top: 1rem;
+      font-size: 1.125rem;
+      font-weight: 500;
+      min-height: 3rem;
+      padding: 0.5rem 1rem;
+      width: 10.1rem;
+    }
+  
+    .form-section-input {
+      height: 3rem;
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .email-input {
+      width: 100%;
+      padding: 0 1.5rem;
+    }
+  
+    .main-heading-1 h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  
+    .main-heading-3 h3 {
+      font-size: 1.125rem;
+      font-weight: 400;
+    }
+  
+    .main-paragraph p {
+      font-size: 1.125rem;
+      font-weight: 400;
+    }
+  
+    .second-section-content {
+      flex-direction: column;
+    }
+  
+    .second-section-text {
+      text-align: center;
+      padding-top: 2rem;
+    }
+  
+    .second-section-text h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  
+    .second-section-text p {
+      font-size: 1.25rem;
+      font-weight: 400;
+    }
+  
+    .second-section {
+      height: 100%;
+    }
+  
+    #third-section,
+    #forth-section {
+      flex-direction: column-reverse;
+    }
+  
+    #third-section p,
+    #forth-section P {
+      font-size: 1.125rem;
+    }
+  
+    .question-heading h1 {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+  
+    .answer span {
+      font-size: 1.125rem;
+      font-weight: 400;
+    }
+  
+    #language {
+      color: transparent;
+    }
+  
+    .question-buttons h3 {
+      font-size: 1.125rem;
+      font-weight: 400;
+    }
+  
+    .question-buttons svg {
+      width: 1rem;
+      height: 1rem;
+    }
+  
+    .links {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .foot * {
+      font-size: 0.875rem;
+    }
+    .foot {
+      padding: 2rem;
+    }
+  
+    .select-btn:after {
+      width: 0;
+      top: 44%;
+      right: 12px;
+    }
+    .select-btn select {
+      width: 4.2rem;
+    }
+  
+    .select-container img{
+      left: 12px;
+      width: 1rem;
+      margin-top: 0.5rem;
+    }
+  }
